@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300:400');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(to bottom, #141e30, #243b55);
+    -webkit-font-smoothing: antialiased;
+
+}
+
+.spinner-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    z-index: 999999;
+}
+
+p {
+    text-align: center;
+    color: #b8b8b8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5em;
+
+}
+
+a {
+    text-align: center;
+    color: #b8b8b8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.a_button {
+    text-align: center;
+    color: #b8b8b8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.containertext {
+    color: aliceblue;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.77);
+}
+
+
+.head {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.77);
+    text-align: center;
+}
+
+.gap {
+    padding: 10px;
+}
+
+.buttongap {
+    padding: 20px;
+}
+.huge_gap{
+    padding: 50px;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.77);
+    text-align: center;
+}
+
+
+/* Button Begins ---------------------------------------------------------*/
+
+.svg-wrapper {
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+}
+
+.shape {
+    fill: transparent;
+    stroke-dasharray: 140px, 540px;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #19f6e8;
+}
+
+.text {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 140px, 540px;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+    }
+    100% {
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+        stroke-width: 6px;
+    }
+}
+
+.svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+}
+
+/* Button END ---------------------------------------------------------*/
+
+/*gallery*/
+h1 + p, p + p {
+    margin-top: 10px;
+}
+
+.container {
+    padding: 40px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-wrap {
+    margin: 10px;
+    transform: perspective(700px);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card-wrap:hover .card-info {
+    transform: translateY(0);
+}
+
+.card-wrap:hover .card-info p {
+    opacity: 1;
+}
+
+.card-wrap:hover .card-info, .card-wrap:hover .card-info p {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-wrap:hover .card-info:after {
+    transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-wrap:hover .card-bg {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.8;
+}
+
+.card-wrap:hover .card {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
+}
+
+.card {
+    position: relative;
+    flex: 0 0 240px;
+    width: 240px;
+    height: 320px;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-bg {
+    opacity: 0.5;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    pointer-events: none;
+}
+
+.card-info {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    transform: translateY(40%);
+    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card-info p {
+    opacity: 0;
+    text-shadow: black 0 2px 3px;
+    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card-info * {
+    position: relative;
+    z-index: 1;
+}
+
+.card-info:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    background-blend-mode: overlay;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-info h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+}
+
+/* text change -------------------------------------------------------------------------*/
+
+
+.container span {
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.places_container {
+    height: 3rem;
+    overflow: hidden;
+}
+
+.places {
+    display: flex;
+    flex-direction: column;
+    animation: change 28s linear infinite alternate;
+}
+
+.places span {
+    font-size: 2.5rem;
+    font-weight: 400;
+    height: 3rem;
+}
+
+@keyframes change {
+    0%,
+    3% {
+        transform: translate3d(0, 0rem, 0);
+    }
+    3.5%,
+    6.5% {
+        transform: translate3d(0, -3rem, 0);
+    }
+    7%,
+    10% {
+        transform: translate3d(0, -6rem, 0);
+    }
+    10.5%,
+    13.5% {
+        transform: translate3d(0, -9rem, 0);
+    }
+    14%,
+    17% {
+        transform: translate3d(0, -12rem, 0);
+    }
+    17.5%,
+    20.5% {
+        transform: translate3d(0, -15rem, 0);
+    }
+    21%,
+    24% {
+        transform: translate3d(0, -18rem, 0);
+    }
+    24.5%,
+    27.5% {
+        transform: translate3d(0, -21rem, 0);
+    }
+    28%,
+    31% {
+        transform: translate3d(0, -24rem, 0);
+    }
+    31.5%,
+    34.5% {
+        transform: translate3d(0, -27rem, 0);
+    }
+    35%,
+    38% {
+        transform: translate3d(0, -30rem, 0);
+    }
+    38.5%,
+    41.5% {
+        transform: translate3d(0, -33rem, 0);
+    }
+    42%,
+    45% {
+        transform: translate3d(0, -36rem, 0);
+    }
+    45.5%,
+    48.5% {
+        transform: translate3d(0, -39rem, 0);
+    }
+    49%,
+    52% {
+        transform: translate3d(0, -42rem, 0);
+    }
+    52.5%,
+    55.5% {
+        transform: translate3d(0, -45rem, 0);
+    }
+    56%,
+    59% {
+        transform: translate3d(0, -48rem, 0);
+    }
+    59.5%,
+    62.5% {
+        transform: translate3d(0, -51rem, 0);
+    }
+    63%,
+    66% {
+        transform: translate3d(0, -54rem, 0);
+    }
+    66.5%,
+    69.5% {
+        transform: translate3d(0, -57rem, 0);
+    }
+    70%,
+    73% {
+        transform: translate3d(0, -60rem, 0);
+    }
+    73.5%,
+    76.5% {
+        transform: translate3d(0, -63rem, 0);
+    }
+    77%,
+    80% {
+        transform: translate3d(0, -66rem, 0);
+    }
+    80.5%,
+    83.5% {
+        transform: translate3d(0, -69rem, 0);
+    }
+    84%,
+    87% {
+        transform: translate3d(0, -72rem, 0);
+    }
+    87.5%,
+    90.5% {
+        transform: translate3d(0, -75rem, 0);
+    }
+    91%,
+    94% {
+        transform: translate3d(0, -78rem, 0);
+    }
+    94.5%,
+    97.5%,
+    100% {
+        transform: translate3d(0, -81rem, 0);
+    }
+}

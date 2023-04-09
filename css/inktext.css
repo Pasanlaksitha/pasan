@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+.morphing {
+  position: relative;
+  font-size: 40px;
+  font-family: 'Montserrat','Permanent Marker', cursive;
+  /* letter-spacing: 9px; */
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  height: 100%;
+  filter: blur(0.2px) contrast(30);
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.word {
+  font-family: 'Montserrat';
+  position: absolute;
+  animation: morphing 16s infinite linear;
+}
+
+.word:nth-child(1) {
+  animation-delay: -16s;
+}
+
+.word:nth-child(2) {
+  animation-delay: -14s;
+}
+
+.word:nth-child(3) {
+  animation-delay: -12s;
+}
+
+.word:nth-child(4) {
+  animation-delay: -10s;
+}
+.word:nth-child(5) {
+  animation-delay: -8s;
+}
+
+.word:nth-child(6) {
+  animation-delay: -6s;
+}
+
+.word:nth-child(7) {
+  animation-delay: -4s;
+}
+
+@keyframes morphing {
+  0%, 5%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  35%, 80% {
+    filter: blur(100px);
+    opacity: 0;
+  }
+}
